@@ -10,10 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Cartes App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: HomeScreen(),
     );
   }
@@ -37,13 +35,28 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cartes App'),
+        title: Text(
+          'Cartes App',
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            fontSize: 20,
+          ),
+        ),
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.orange,
+        actions: [
+          ElevatedButton(
+            onPressed: toggleCarte,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.black,
+              padding: EdgeInsets.all(5),
+              side: BorderSide(width: 2.5, color: Colors.orange),
+            ),
+            child: Icon(Icons.swap_horiz, color: Colors.orange, size: 20),
+          ),
+        ],
       ),
       body: showCarte0 ? Carte0() : Carte1(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: toggleCarte,
-        child: Icon(Icons.swap_horiz),
-      ),
     );
   }
 }
