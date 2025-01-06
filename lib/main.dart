@@ -38,7 +38,6 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           'Cartes App',
           style: TextStyle(
-            fontFamily: 'Montserrat',
             fontSize: 20,
           ),
         ),
