@@ -9,6 +9,11 @@ class Carte0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Carte 0'),
+        foregroundColor: Colors.orange,
+        backgroundColor: Colors.black,
+      ),
       body: Stack(children: [
         FlutterMap(
           options: const MapOptions(

@@ -22,6 +22,8 @@ class Carte1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Carte 1'),
+        foregroundColor: Colors.orange,
+        backgroundColor: Colors.black,
       ),
       body: FlutterMap(
         options: const MapOptions(
